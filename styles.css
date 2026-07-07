@@ -90,3 +90,15 @@ nav a:hover {
 .dugme-kontakt:hover {
   background-color: #3690c9;
 }
+
+.link-navigacija {
+  text-decoration: none;
+  color: #1c1c2b;
+  font-weight: 500;
+  font-style: bold;
+  transition: color 0.3s ease;
+}
+
+.link-navigacija:hover {
+  color: #4aa8e0;
+}
