@@ -21,12 +21,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px;
-    gap: 20px;
 }
 
 .LogoProPVC {
-    width: 150px;
+    width: 75px;
     height: auto;
 }
 
@@ -41,7 +39,7 @@ body{
 
 .pretraga{
     padding: 8px 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     width: 200px;
     color: #fff;
@@ -100,5 +98,15 @@ nav a:hover {
 }
 
 .link-navigacija:hover {
+  color: #4aa8e0;
+}
+
+.link-adresa {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-adresa:hover {
   color: #4aa8e0;
 }
