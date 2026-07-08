@@ -110,3 +110,137 @@ nav a:hover {
 .link-adresa:hover {
   color: #4aa8e0;
 }
+
+
+/* Hero sekcija */
+.hero {
+    background-image: url('Slike/pozadina-cevi.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.hero-tekst {
+    max-width: 550px;
+}
+
+.hero-tekst h1 {
+    font-size: 48px;
+    color: #1c1c2b;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.hero-tekst h1 span {
+    font-weight: 900; /* deblji font za drugi red */
+}
+
+.hero-tekst p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.dugme-istrazite {
+    background-color: #4aa8e0;
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dugme-istrazite:hover {
+    background-color: #3690c9;
+}
+/* kraj Hero sekcije */
+
+/* Footer sekcija */
+.site-footer {
+    background-color: #1c1c2b;
+    color: #fff;
+}
+
+.footer-glavni {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 50px 60px;
+}
+
+.footer-stavka {
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+}
+
+.footer-ikonica {
+    margin-right: 8px;
+}
+
+.footer-neradni {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.footer-naslov {
+    color: #4aa8e0;
+    margin: 0 0 15px 0;
+}
+
+.footer-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-lista li {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.footer-logo-slika {
+    max-width: 180px;
+    height: auto;
+}
+
+.footer-donji {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-donji a {
+    color: #4aa8e0;
+    text-decoration: none;
+}
+
+.footer-drustvene {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-drustvene a {
+    background-color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* kraj Footer sekcije */
