@@ -58,60 +58,16 @@
                 dok se od mekog izrađuju trakaste zavese, vodootporne membrane, izolatori za žice i kablove.
             </p>
         </div>
-        <footer class="site-footer">
-            <div class="footer-glavni">
-            <div class="footer-kolona">
-            <p class="footer-stavka">
-                <span class="footer-ikonica">🕐</span>
-                Radno vreme:<br>
-                &nbsp;&nbsp;&nbsp;ponedeljak - petak<br>
-                &nbsp;&nbsp;&nbsp;08:00 do 16:00h
-            </p>
-            <p class="footer-neradni">subota i nedelja neradni dani</p>
-        </div>
+        
+    <div id="footer-placeholder"></div>
 
-        <div class="footer-kolona">
-            <p class="footer-stavka">
-                <span class="footer-ikonica">📍</span>
-                Mihaila Šuškalovića 31, Beograd
-            </p>
-            <p class="footer-stavka">
-                <span class="footer-ikonica">✉️</span>
-                info@izoplastika.rs
-            </p>
-            <p class="footer-stavka">
-                <span class="footer-ikonica">📞</span>
-                011/ 2509 - 340
-            </p>
-        </div>
-
-        <div class="footer-kolona">
-            <h4 class="footer-naslov">Proizvodi i usluge</h4>
-            <ul class="footer-lista">
-                <li>POLIAMID PA</li>
-                <li>POLIACETAL POM</li>
-                <li>TEFLON</li>
-                <li>POLIPROPILEN PP</li>
-                <li>POLIETILEN PE</li>
-                <li>PVC</li>
-                <li>PEEK</li>
-                <li>PET</li>
-            </ul>
-        </div>
-
-            <div class="footer-kolona footer-logo">
-                <img src="Slike/Logo.png" alt="Logo" class="footer-logo-slika">
-            </div>
-        </div>
-
-        <div class="footer-donji">
-            <p>Copyright © Industrijskaplastika. Sva prava zadržana. Razvoj <a href="#">Spartans Web</a></p>
-                <div class="footer-drustvene">
-                <a href="#"><span>📘</span></a>
-                <a href="#"><span>📷</span></a>
-            </div>
-        </div>
-    </footer>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
     </body>
 </html>
         

@@ -216,19 +216,6 @@ nav a:hover {
     height: auto;
 }
 
-.footer-donji {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding: 20px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-donji a {
-    color: #4aa8e0;
-    text-decoration: none;
-}
-
 .footer-drustvene {
     display: flex;
     gap: 15px;
