@@ -230,4 +230,15 @@ nav a:hover {
     align-items: center;
     justify-content: center;
 }
+
+.footer-stavka a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-stavka:hover a {
+  color: #4aa8e0;
+}
 /* kraj Footer sekcije */
+
