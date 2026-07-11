@@ -297,5 +297,26 @@ nav a:hover {
     line-height: 1.6;
 }
 
+/* O nama - statistika */
+.statistika {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px 40px 60px 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.stat-broj {
+    font-size: 36px;
+    font-weight: 900;
+    color: #4aa8e0;
+}
+
+.stat-opis {
+    color: #555;
+    font-size: 15px;
+}
+
 
 
