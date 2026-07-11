@@ -318,5 +318,119 @@ nav a:hover {
     font-size: 15px;
 }
 
+/* Kontakt stranica */
+.kontakt-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 100px 60px 100px;
+}
 
+.kontakt-info-kartica {
+    background-color: #1c1c2b;
+    color: #fff;
+    border-radius: 15px;
+    padding: 35px;
+}
+
+.kontakt-info-kartica h3 {
+    color: #4aa8e0;
+    margin-bottom: 20px;
+}
+
+.kontakt-info-kartica p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.kontakt-info-kartica a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.kontakt-info-kartica a:hover {
+    color: #4aa8e0;
+}
+
+.kontakt-mapa {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    min-height: 350px;
+    width: calc(100% - 200px);
+    margin: 0 100px 60px 100px;
+    display: block;
+}
+
+/* Forma za kontakt */
+.forma-kontakt {
+    background-color: #f7f7f9;
+    border-radius: 15px;
+    padding: 35px;
+}
+
+.forma-kontakt h3 {
+    color: #1c1c2b;
+    margin-bottom: 20px;
+}
+
+.polje-grupa {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.polje-grupa label {
+    font-weight: 500;
+    color: #1c1c2b;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.polje-grupa input,
+.polje-grupa textarea {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #333;
+    resize: vertical;
+}
+
+.polje-grupa input:focus,
+.polje-grupa textarea:focus {
+    outline: none;
+    border-color: #4aa8e0;
+}
+
+.poruka-greske {
+    color: #e0503c;
+    font-size: 13px;
+    min-height: 18px;
+    margin-top: 4px;
+}
+
+.poruka-uspeh {
+    color: #2e9e5b;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+    .kontakt-mapa {
+        width: calc(100% - 50px);
+        margin: 0 25px 40px 25px;
+    }
+}
+
+@media (max-width: 800px) {
+    .sekcija, .kartice, .kontakt-wrap {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .kontakt-wrap {
+        grid-template-columns: 1fr;
+    }
+}
 

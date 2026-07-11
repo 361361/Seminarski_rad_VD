@@ -3,19 +3,70 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PVC proizvodnja</title>
+        <title>ProPVC proizvodnja - Kontakt</title>
+        <meta name="description" content="Kontaktirajte ProPVC proizvodnju - adresa, telefon, email i lokacija na mapi.">
+        <meta name="keywords" content="kontakt, ProPVC, Lička 36 Inđija, telefon, email">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#pocetna">Početna</a></li>
-                    <li><a href="#proizvodi">Proizvodi</a></li>
-                    <li><a href="#o_nama">O nama</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div id="header-placeholder"></div>
+
+        <div class="naslov-stranice">
+            <h1>Kontaktirajte nas</h1>
+            <p>Tu smo za sva pitanja o proizvodima, cenama i saradnji.</p>
+        </div>
+
+        <div class="kontakt-wrap">
+            <div class="kontakt-info-kartica">
+                <h3>Podaci za kontakt</h3>
+                <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Lička+36,+Inđija" target="_blank">Lička 36, Inđija</a></p>
+                <p>✉️ <a href="mailto:info@ProPVC.rs">info@ProPVC.rs</a></p>
+                <p>📞 <a href="tel:+38162207736">062/ 207 - 736</a></p>
+                <p>🕐 Radno vreme: ponedeljak - petak, 08:00 - 16:00h</p>
+            </div>
+
+            <form id="forma-kontakt" class="forma-kontakt" novalidate>
+                <h3>Pošaljite nam poruku</h3>
+
+                <div class="polje-grupa">
+                    <label for="ime">Ime i prezime</label>
+                    <input type="text" id="ime" name="ime" placeholder="Unesite ime i prezime">
+                    <span class="poruka-greske" id="greska-ime"></span>
+                </div>
+
+                <div class="polje-grupa">
+                    <label for="email">Email adresa</label>
+                    <input type="text" id="email" name="email" placeholder="primer@email.com">
+                    <span class="poruka-greske" id="greska-email"></span>
+                </div>
+
+                <div class="polje-grupa">
+                    <label for="telefon">Telefon (opciono)</label>
+                    <input type="text" id="telefon" name="telefon" placeholder="06X/ XXXX - XXX">
+                    <span class="poruka-greske" id="greska-telefon"></span>
+                </div>
+
+                <div class="polje-grupa">
+                    <label for="poruka">Poruka</label>
+                    <textarea id="poruka" name="poruka" rows="4" placeholder="Opišite vaš upit..."></textarea>
+                    <span class="poruka-greske" id="greska-poruka"></span>
+                </div>
+
+                <button type="submit" class="dugme-kontakt">Pošalji poruku</button>
+                <p class="poruka-uspeh" id="poruka-uspeh"></p>
+            </form>
+        </div>
+
+        <iframe
+            class="kontakt-mapa"
+            src="https://www.google.com/maps?q=Lička+36,+Inđija&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokacija ProPVC proizvodnje na mapi">
+        </iframe>
+
+        <div id="footer-placeholder"></div>
+        <script src="script.js"></script>
+        <script src="forma.js"></script>
     </body>
 </html>
