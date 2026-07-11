@@ -3,37 +3,63 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pro PVC proizvodnja</title>
+        <title>ProPVC proizvodnja - Početna</title>
+        <meta name="description" content="ProPVC proizvodnja - proizvodnja i prodaja PVC cevi, profila i industrijske plastike u Inđiji.">
+        <meta name="keywords" content="PVC, PVC cevi, industrijska plastika, proizvodnja plastike, Inđija">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div id="header-placeholder"></div>
-        <section class="hero">
-            <div class="hero-tekst">
-                <h1>Najbolja ponuda<br><span>industrijske plastike</span></h1>
-                <p>Više od tri decenije smo posvećeni najboljoj usluzi prema svim partnerima.</p>
-                <button class="dugme-istrazite">Istražite</button>
+
+        <section class="hero-slajder" id="hero-slajder">
+            <div class="slajd aktivan-slajd" style="background-image: linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)), url('Slike/pozadina-cevi.png');">
+                <div class="hero-tekst">
+                    <h1>Najbolja ponuda<br><span>industrijske plastike</span></h1>
+                    <p>Više od tri decenije smo posvećeni najboljoj usluzi prema svim partnerima.</p>
+                    <a class="dugme-istrazite" href="proizvodi.html">Istražite</a>
+                </div>
+            </div>
+
+            /* PLACEHOLDER slajd 2 */
+            <div class="slajd" style="background-color:#1c1c2b;">
+                <div class="hero-tekst hero-tekst-tamno">
+                    <h1>Kvalitet koji<br><span>traje generacijama</span></h1>
+                    <p>Placeholder slajd </p>
+                    <a class="dugme-istrazite" href="proizvodi.html">Istražite</a>
+                </div>
+            </div>
+
+            /* PLACEHOLDER slajd 3 */
+            <div class="slajd" style="background-color:#2b3a55;">
+                <div class="hero-tekst hero-tekst-tamno">
+                    <h1>Brza isporuka<br><span>širom regiona</span></h1>
+                    <p>Placeholder slajd </p>
+                    <a class="dugme-istrazite" href="kontakt.html">Kontaktirajte nas</a>
+                </div>
+            </div>
+
+            <button class="slajder-strelica strelica-levo" id="strelica-levo" aria-label="Prethodni slajd">&#10094;</button>
+            <button class="slajder-strelica strelica-desno" id="strelica-desno" aria-label="Sledeći slajd">&#10095;</button>
+
+            <div class="slajder-tacke" id="slajder-tacke">
+                <span class="tacka aktivna-tacka" data-indeks="0"></span>
+                <span class="tacka" data-indeks="1"></span>
+                <span class="tacka" data-indeks="2"></span>
             </div>
         </section>
-        <div class="text">
-            <h1>PVC</h1>
+
+        <div class="naslov-stranice">
+            <h1>Ko smo mi</h1>
+            <p>Kratak uvod u naš rad, viziju i iskustvo u proizvodnji PVC materijala.</p>
+        </div>
+        <div class="sekcija">
             <p>
-                Polivinil-hlorid ili PVC, jedan je od najzastupljenijh polimera u raznim industrijama usled
-                svoje odlične otpornosti na hemikalije, struju i vatru. Ima visoku zateznu čvrstoću,
-                a dodavanjem plastifikatora dobija na fleksibilnosti i termičkoj stabilnosti,
-                te je njegova primena veoma široka. 
+                ProPVC proizvodnja je porodična firma iz Inđije koja se dugi niz godina bavi
+                preradom i prodajom polivinil-hlorida (PVC) i drugih industrijskih plastičnih
+                materijala. Naš cilj je da svakom partneru ponudimo kvalitetan proizvod,
+                brzu isporuku i stručan savet pri izboru materijala za konkretnu namenu.
             </p>
-            <p>
-                Podnosi razne načine obrade i jednostavno se obrađuje uz niske tolerancije,
-                bez potrebe za dugotrajnom završnom obradom. Može da se lepi, vari,
-                a koristi se i u 3D štampi.
-            </p>
-            <p>
-                Izuzetno je prisutan u građevinskoj, tekstilnoj, hemijskoj kao i auto industriji.
-                U zavisnosti od količine dodatog plastifikatora, PVC delimo na tvrdi i meki.
-                Tvrdi PVC koristi se za izradu kada za hemijsku obradu, zupčanika, lančanika, ventila, cevi,
-                dok se od mekog izrađuju trakaste zavese, vodootporne membrane, izolatori za žice i kablove.
-            </p>
+            <a class="link-navigacija" href="o_nama.html">Pročitajte više o nama →</a>
         </div>
 
         <div class="naslov-stranice">
@@ -57,13 +83,12 @@
                 <p>Idealne za izradu reklamnih panoa, ograda i unutrašnje opreme.</p>
             </div>
         </div>
-    
         <div class="sekcija" style="text-align:center; padding-top:0;">
             <a class="dugme-kontakt" href="proizvodi.html">Pogledajte ceo asortiman</a>
         </div>
 
         <div id="footer-placeholder"></div>
         <script src="script.js"></script>
+        <script src="slajder.js"></script>
     </body>
 </html>
-        
