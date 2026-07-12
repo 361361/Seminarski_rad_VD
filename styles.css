@@ -241,6 +241,7 @@ nav a:hover {
 
 /* Footer sekcija */
 .site-footer {
+    margin-top: auto;
     background-color: #1c1c2b;
     color: #fff;
 }
@@ -361,6 +362,17 @@ nav a:hover {
     color: #555;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Sekcija sa tekstom */
+.sekcija {
+    padding: 20px 100px 60px 100px;
+}
+
+.sekcija p {
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
 /* Kartice proizvoda */
@@ -536,5 +548,3 @@ nav a:hover {
         grid-template-columns: 1fr;
     }
 }
-
-
