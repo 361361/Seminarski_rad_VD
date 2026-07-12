@@ -32,7 +32,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -78,11 +78,12 @@ nav a:hover {
 .dugme-kontakt {
    background-color: #4aa8e0;
    color: #fff;
-   border: none;
+   border: 2px solid #4aa8e0;
    padding: 12px 25px;
    border-radius: 20px;
    cursor: pointer;
    font-weight: bold; 
+   transition: background-color 0.3s ease;
 }
 
 .dugme-kontakt:hover {
@@ -111,21 +112,45 @@ nav a:hover {
   color: #4aa8e0;
 }
 
+.aktivan-link {
+  color: #4aa8e0;
+  border-bottom: 2px solid #4aa8e0;
+  padding-bottom: 4px;
+}
 
 /* Hero sekcija */
-.hero {
-    background-image: url('Slike/pozadina-cevi.png');
+.hero-slajder {
+    position: relative;
+    min-height: 700px;
+    overflow: hidden;
+}
+
+.slajd {
+    position: absolute;
+    inset: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 700px;
     display: flex;
     align-items: center;
     padding: 0 100px;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.8s ease;
+}
+
+.slajd.aktivan-slajd {
+    opacity: 1;
+    z-index: 2;
 }
 
 .hero-tekst {
     max-width: 550px;
+}
+
+.hero-tekst-tamno h1,
+.hero-tekst-tamno p {
+    color: #fff;
 }
 
 .hero-tekst h1 {
@@ -154,6 +179,8 @@ nav a:hover {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
     transition: background-color 0.3s ease;
 }
 
@@ -161,6 +188,56 @@ nav a:hover {
     background-color: #3690c9;
 }
 /* kraj Hero sekcije */
+
+/* Strelice slajdera */
+.slajder-strelica {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background-color: rgba(255,255,255,0.7);
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #1c1c2b;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slajder-strelica:hover {
+    background-color: #4aa8e0;
+    color: #fff;
+}
+
+.strelica-levo { left: 25px; }
+.strelica-desno { right: 25px; }
+
+/* Tačke slajdera */
+.slajder-tacke {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.tacka {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tacka.aktivna-tacka {
+    background-color: #4aa8e0;
+}
+/* kraj Hero slajdera */
 
 /* Footer sekcija */
 .site-footer {
@@ -241,6 +318,32 @@ nav a:hover {
   color: #4aa8e0;
 }
 /* kraj Footer sekcije */
+
+/* Video sekcija */
+.video-lokalni {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.video-youtube-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: hidden;
+}
+ 
+.video-youtube-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+/* kraj Video sekcije */
 
 /* Naslov stranice */
 .naslov-stranice {
