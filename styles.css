@@ -1,3 +1,35 @@
+/* TEME (svetla/tamna) - CSS promenljive */
+:root {
+    --bg-glavna: #ffffff;
+    --bg-header: #f1f1f1;
+    --bg-kartica: #f7f7f9;
+    --tekst-glavni: #1c1c2b;
+    --tekst-sekundarni: #333333;
+    --tekst-priguseni: #555555;
+    --ivica: #dddddd;
+    --akcenat: #4aa8e0;
+}
+
+html {
+    font-size: 16px; /* osnovica za rem jedinice - menja se preko JS-a (dugmad A-/A+) */
+    scroll-behavior: smooth;
+}
+
+html[data-tema] {
+    transition: filter 0.3s ease;
+}
+
+html[data-tema="tamna"] {
+    --bg-glavna: #14141f;
+    --bg-header: #1c1c2b;
+    --bg-kartica: #20202f;
+    --tekst-glavni: #f1f1f1;
+    --tekst-sekundarni: #cfcfcf;
+    --tekst-priguseni: #aaaaaa;
+    --ivica: #3a3a4a;
+    --akcenat: #4aa8e0;
+}
+
 * {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
@@ -8,21 +40,56 @@
   background-color: #1c1c2b;
   color: #fff;
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 10px;
-  font-size: 14px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  padding: 10px 20px;
+  font-size: 0.875rem;
   border-radius: 15px;
   margin: 10px 20px 0 20px;
 }
 
+.kontakt-info-traka {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pristupacnost-kontrole {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.dugme-pristupacnost {
+    background-color: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.dugme-pristupacnost:hover {
+    background-color: rgba(255,255,255,0.28);
+}
+
 .logo {
-    background-color: #f1f1f1;
+    background-color: var(--bg-glavna);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 40px;
     gap: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .LogoProPVC {
@@ -37,6 +104,9 @@ body{
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: var(--bg-glavna);
+    color: var(--tekst-sekundarni);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .pretraga{
@@ -48,10 +118,8 @@ body{
 }
 
 header{
-    background-color: #f1f1f1;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    background-color: var(--bg-glavna);
+    transition: background-color 0.3s ease;
 }
 
 nav {
@@ -94,7 +162,7 @@ nav a:hover {
 
 .link-navigacija {
   text-decoration: none;
-  color: #1c1c2b;
+  color: var(--tekst-glavni);
   font-weight: 500;
   font-style: bold;
   transition: color 0.3s ease;
@@ -137,9 +205,9 @@ nav a:hover {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: #1c1c2b;
+    background-color: var(--tekst-glavni);
     border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
 }
 
 /* Animacija - hamburger ikonica se pretvara u X kad je meni otvoren */
@@ -191,8 +259,8 @@ nav a:hover {
 }
 
 .hero-tekst h1 {
-    font-size: 48px;
-    color: #1c1c2b;
+    font-size: 3rem;
+    color: var(--tekst-glavni);
     margin: 0 0 20px 0;
     line-height: 1.2;
 }
@@ -202,8 +270,8 @@ nav a:hover {
 }
 
 .hero-tekst p {
-    font-size: 16px;
-    color: #333;
+    font-size: 1rem;
+    color: var(--tekst-sekundarni);
     margin-bottom: 30px;
 }
 
@@ -213,7 +281,7 @@ nav a:hover {
     border: none;
     padding: 15px 35px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
@@ -390,13 +458,13 @@ nav a:hover {
 }
 
 .naslov-stranice h1 {
-    color: #1c1c2b;
-    font-size: 40px;
+    color: var(--tekst-glavni);
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .naslov-stranice p {
-    color: #555;
+    color: var(--tekst-priguseni);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -407,7 +475,7 @@ nav a:hover {
 }
 
 .sekcija p {
-    color: #333;
+    color: var(--tekst-sekundarni);
     line-height: 1.7;
     margin-bottom: 15px;
 }
@@ -421,11 +489,11 @@ nav a:hover {
 }
 
 .kartica {
-    background-color: #f7f7f9;
+    background-color: var(--bg-kartica);
     border-radius: 15px;
     padding: 30px 25px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .kartica:hover {
@@ -439,13 +507,13 @@ nav a:hover {
 }
 
 .kartica h3 {
-    color: #1c1c2b;
+    color: var(--tekst-glavni);
     margin-bottom: 10px;
 }
 
 .kartica p {
-    color: #555;
-    font-size: 15px;
+    color: var(--tekst-priguseni);
+    font-size: 0.9375rem;
     line-height: 1.6;
 }
 
@@ -460,14 +528,14 @@ nav a:hover {
 }
 
 .stat-broj {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 900;
-    color: #4aa8e0;
+    color: var(--akcenat);
 }
 
 .stat-opis {
-    color: #555;
-    font-size: 15px;
+    color: var(--tekst-priguseni);
+    font-size: 0.9375rem;
 }
 
 /* Kontakt stranica */
@@ -516,13 +584,14 @@ nav a:hover {
 
 /* Forma za kontakt */
 .forma-kontakt {
-    background-color: #f7f7f9;
+    background-color: var(--bg-kartica);
     border-radius: 15px;
     padding: 35px;
+    transition: background-color 0.3s ease;
 }
 
 .forma-kontakt h3 {
-    color: #1c1c2b;
+    color: var(--tekst-glavni);
     margin-bottom: 20px;
 }
 
@@ -534,19 +603,20 @@ nav a:hover {
 
 .polje-grupa label {
     font-weight: 500;
-    color: #1c1c2b;
+    color: var(--tekst-glavni);
     margin-bottom: 6px;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .polje-grupa input,
 .polje-grupa textarea {
     padding: 10px 14px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--ivica);
     border-radius: 10px;
     font-family: Arial, sans-serif;
-    font-size: 15px;
-    color: #333;
+    font-size: 0.9375rem;
+    color: var(--tekst-sekundarni);
+    background-color: var(--bg-glavna);
     resize: vertical;
 }
 
@@ -558,7 +628,7 @@ nav a:hover {
 
 .poruka-greske {
     color: #e0503c;
-    font-size: 13px;
+    font-size: 0.8125rem;
     min-height: 18px;
     margin-top: 4px;
 }
@@ -640,7 +710,7 @@ nav a:hover {
     }
 
     .hero-tekst h1 {
-        font-size: 34px;
+        font-size: 2.125rem;
     }
 
     .footer-glavni {
@@ -668,11 +738,11 @@ nav a:hover {
     }
 
     .hero-tekst h1 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     .naslov-stranice h1 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     .kontakt-info-kartica,

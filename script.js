@@ -54,6 +54,9 @@ function podesiHamburgerMeni() {
 function poslePunjenjaHeadera() {
     oznaciAktivnuStranicu();
     podesiHamburgerMeni();
+    if (typeof podesiKontroleTemeIFonta === "function") {
+        podesiKontroleTemeIFonta();
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
