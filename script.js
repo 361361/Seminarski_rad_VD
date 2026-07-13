@@ -29,7 +29,34 @@ function oznaciAktivnuStranicu() {
     });
 }
 
+// Otvara/zatvara mobilni meni na klik na hamburger dugme
+function podesiHamburgerMeni() {
+    const dugme = document.getElementById("hamburger-dugme");
+    const navigacija = document.getElementById("glavna-navigacija");
+    if (!dugme || !navigacija) return;
+
+    dugme.addEventListener("click", () => {
+        const jeOtvoren = navigacija.classList.toggle("meni-otvoren");
+        dugme.classList.toggle("hamburger-aktivan", jeOtvoren);
+        dugme.setAttribute("aria-expanded", jeOtvoren);
+    });
+
+    // Zatvara meni kad korisnik klikne na neki od linkova (npr. na telefonu)
+    navigacija.querySelectorAll(".link-navigacija").forEach(link => {
+        link.addEventListener("click", () => {
+            navigacija.classList.remove("meni-otvoren");
+            dugme.classList.remove("hamburger-aktivan");
+            dugme.setAttribute("aria-expanded", "false");
+        });
+    });
+}
+
+function poslePunjenjaHeadera() {
+    oznaciAktivnuStranicu();
+    podesiHamburgerMeni();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-    ucitajDeoStranice("header.html", "header-placeholder", oznaciAktivnuStranicu);
+    ucitajDeoStranice("header.html", "header-placeholder", poslePunjenjaHeadera);
     ucitajDeoStranice("footer.html", "footer-placeholder");
 });

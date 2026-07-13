@@ -21,6 +21,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 15px 40px;
+    gap: 20px;
 }
 
 .LogoProPVC {
@@ -42,7 +44,7 @@ body{
     border-radius: 10px;
     border: none;
     width: 200px;
-    color: #fff;
+    color: #333;
 }
 
 header{
@@ -116,6 +118,41 @@ nav a:hover {
   color: #4aa8e0;
   border-bottom: 2px solid #4aa8e0;
   padding-bottom: 4px;
+}
+
+/* Hamburger dugme - sakriveno na desktopu, prikazano tek na mobilnom (u media query-ju) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #1c1c2b;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animacija - hamburger ikonica se pretvara u X kad je meni otvoren */
+.hamburger.hamburger-aktivan span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.hamburger-aktivan span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.hamburger-aktivan span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 /* Hero sekcija */
@@ -530,6 +567,131 @@ nav a:hover {
     color: #2e9e5b;
     font-weight: 500;
     margin-top: 15px;
+}
+
+/* ANIMACIJA - fade-in efekat pri učitavanju */
+@keyframes pojavljivanjeOdozdo {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-tekst {
+    animation: pojavljivanjeOdozdo 0.9s ease both;
+}
+
+.naslov-stranice h1,
+.naslov-stranice p {
+    animation: pojavljivanjeOdozdo 0.7s ease both;
+}
+
+/* RESPONZIVNOST - tablet (do 900px) */
+@media (max-width: 900px) {
+    .logo {
+        flex-wrap: wrap;
+    }
+
+    .gornji-bar {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: flex;
+        order: 3;
+    }
+
+    .pretraga {
+        order: 2;
+        width: 160px;
+    }
+
+    #glavna-navigacija {
+        order: 4;
+        flex-basis: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+    }
+
+    #glavna-navigacija.meni-otvoren {
+        max-height: 300px;
+    }
+
+    #glavna-navigacija ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 20px 0;
+    }
+
+    .dugme-kontakt {
+        order: 5;
+    }
+
+    .hero-slajder {
+        min-height: 500px;
+    }
+
+    .hero-tekst h1 {
+        font-size: 34px;
+    }
+
+    .footer-glavni {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* RESPONZIVNOST - mobilni (do 600px) */
+@media (max-width: 600px) {
+    .logo {
+        padding: 15px 20px;
+    }
+
+    .LogoProPVC {
+        width: 55px;
+    }
+
+    .pretraga {
+        display: none;
+    }
+
+    .hero-slajder {
+        min-height: 420px;
+        padding: 0 25px;
+    }
+
+    .hero-tekst h1 {
+        font-size: 28px;
+    }
+
+    .naslov-stranice h1 {
+        font-size: 28px;
+    }
+
+    .kontakt-info-kartica,
+    .forma-kontakt {
+        padding: 22px;
+    }
+
+    .footer-glavni {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .statistika {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 800px) {
