@@ -257,11 +257,11 @@ nav a:hover {
 }
 
 .slajd-2 {
-    background-color: var(--marka-tamna);
+    background-image: linear-gradient(rgba(28,28,43,0.55), rgba(28,28,43,0.55)), url('Slike/Slika_slajd_2.png');
 }
 
 .slajd-3 {
-    background-color: var(--marka-tamna-2);
+    background-image: linear-gradient(rgba(28,28,43,0.55), rgba(28,28,43,0.55)), url('Slike/Slika_slajd_3.png');
 }
 
 /* Utility klase - zamena za inline stilove u sekcijama */
