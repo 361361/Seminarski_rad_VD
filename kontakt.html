@@ -1,75 +1,145 @@
 <!DOCTYPE html>
 <html lang="sr-RS">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ProPVC proizvodnja - Kontakt</title>
-        <meta name="description" content="Kontaktirajte ProPVC proizvodnju - adresa, telefon, email i lokacija na mapi.">
-        <meta name="keywords" content="kontakt, ProPVC, Lička 36 Inđija, telefon, email">
-        <link rel="stylesheet" href="styles.css">
-        <script src="tema.js"></script>
-    </head>
-    <body>
-        <div id="header-placeholder"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProPVC proizvodnja - Kontakt</title>
+    <meta name="description" content="Kontaktirajte ProPVC proizvodnju - adresa, telefon, email i lokacija na mapi. Stranica izrađena isključivo Bootstrap klasama.">
+    <meta name="keywords" content="kontakt, ProPVC, Lička 36 Inđija, telefon, email, bootstrap">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+</head>
+<body class="bg-light">
 
-        <main>
-        <div class="naslov-stranice">
-            <h1>Kontaktirajte nas</h1>
-            <p>Tu smo za sva pitanja o proizvodima, cenama i saradnji.</p>
+    <!-- gornja info traka -->
+    <div class="bg-dark text-white text-center small py-2">
+        <span class="mx-2">📍 <a class="link-light" href="https://www.google.com/maps/search/?api=1&query=Lička+36,+Inđija" target="_blank">Lička 36, Inđija</a></span>
+        <span class="mx-2">✉️ <a class="link-light" href="mailto:info@ProPVC.rs">info@ProPVC.rs</a></span>
+        <span class="mx-2">📞 <a class="link-light" href="tel:+38162207736">062/ 207 - 736</a></span>
+    </div>
+
+    <!-- navigacija -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">ProPVC proizvodnja</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#glavniMeni"
+                    aria-controls="glavniMeni" aria-expanded="false" aria-label="Otvori meni">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="glavniMeni">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Početna</a></li>
+                    <li class="nav-item"><a class="nav-link" href="proizvodi.html">Proizvodi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="o_nama.html">O nama</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="kontakt.html">Kontakt</a></li>
+                </ul>
+                <a href="tel:+38162207736" class="btn btn-primary ms-lg-3">Pozovite nas</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="kontakt-wrap">
-            <div class="kontakt-info-kartica">
-                <h3>Podaci za kontakt</h3>
-                <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Lička+36,+Inđija" target="_blank">Lička 36, Inđija</a></p>
-                <p>✉️ <a href="mailto:info@ProPVC.rs">info@ProPVC.rs</a></p>
-                <p>📞 <a href="tel:+38162207736">062/ 207 - 736</a></p>
-                <p>🕐 Radno vreme: ponedeljak - petak, 08:00 - 16:00h</p>
+    <!-- naslov stranice -->
+    <header class="text-center py-5">
+        <h1 class="fw-bold">Kontaktirajte nas</h1>
+        <p class="text-muted">Tu smo za sva pitanja o proizvodima, cenama i saradnji.</p>
+    </header>
+
+    <main class="container pb-5">
+        <div class="row g-4">
+            <!-- kontakt info kartica -->
+            <div class="col-lg-5">
+                <div class="card bg-dark text-white h-100">
+                    <div class="card-body">
+                        <h3 class="card-title text-info mb-4">Podaci za kontakt</h3>
+                        <p class="mb-3">📍 <a class="link-light" href="https://www.google.com/maps/search/?api=1&query=Lička+36,+Inđija" target="_blank">Lička 36, Inđija</a></p>
+                        <p class="mb-3">✉️ <a class="link-light" href="mailto:info@ProPVC.rs">info@ProPVC.rs</a></p>
+                        <p class="mb-3">📞 <a class="link-light" href="tel:+38162207736">062/ 207 - 736</a></p>
+                        <p class="mb-0">🕐 Radno vreme: ponedeljak - petak, 08:00 - 16:00h</p>
+                    </div>
+                </div>
             </div>
 
-            <form id="forma-kontakt" class="forma-kontakt" novalidate>
-                <h3>Pošaljite nam poruku</h3>
+            <!-- forma -->
+            <div class="col-lg-7">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Pošaljite nam poruku</h3>
+                        <form id="formaKontaktBs" novalidate>
+                            <div class="mb-3">
+                                <label for="bsIme" class="form-label">Ime i prezime</label>
+                                <input type="text" class="form-control" id="bsIme" placeholder="Unesite ime i prezime">
+                                <div class="invalid-feedback">Unesite ime i prezime (minimum 2 karaktera).</div>
+                            </div>
 
-                <div class="polje-grupa">
-                    <label for="ime">Ime i prezime</label>
-                    <input type="text" id="ime" name="ime" placeholder="Unesite ime i prezime">
-                    <span class="poruka-greske" id="greska-ime"></span>
+                            <div class="mb-3">
+                                <label for="bsEmail" class="form-label">Email adresa</label>
+                                <input type="text" class="form-control" id="bsEmail" placeholder="primer@email.com">
+                                <div class="invalid-feedback">Unesite ispravnu email adresu.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="bsTelefon" class="form-label">Telefon (opciono)</label>
+                                <input type="text" class="form-control" id="bsTelefon" placeholder="06X/ XXX - XXXX">
+                                <div class="invalid-feedback">Unesite ispravan format telefona.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="bsPoruka" class="form-label">Poruka</label>
+                                <textarea class="form-control" id="bsPoruka" rows="4" placeholder="Opišite vaš upit..."></textarea>
+                                <div class="invalid-feedback">Poruka mora imati bar 10 karaktera.</div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Pošalji poruku</button>
+                            <div id="bsPorukaUspeh" class="text-success fw-semibold mt-3"></div>
+                        </form>
+                    </div>
                 </div>
-
-                <div class="polje-grupa">
-                    <label for="email">Email adresa</label>
-                    <input type="text" id="email" name="email" placeholder="primer@email.com">
-                    <span class="poruka-greske" id="greska-email"></span>
-                </div>
-
-                <div class="polje-grupa">
-                    <label for="telefon">Telefon (opciono)</label>
-                    <input type="text" id="telefon" name="telefon" placeholder="06X/ XXXX - XXX">
-                    <span class="poruka-greske" id="greska-telefon"></span>
-                </div>
-
-                <div class="polje-grupa">
-                    <label for="poruka">Poruka</label>
-                    <textarea id="poruka" name="poruka" rows="4" placeholder="Opišite vaš upit..."></textarea>
-                    <span class="poruka-greske" id="greska-poruka"></span>
-                </div>
-
-                <button type="submit" class="dugme-kontakt">Pošalji poruku</button>
-                <p class="poruka-uspeh" id="poruka-uspeh"></p>
-            </form>
+            </div>
         </div>
 
-        <iframe
-            class="kontakt-mapa"
-            src="https://www.google.com/maps?q=Lička+36,+Inđija&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Lokacija ProPVC proizvodnje na mapi">
-        </iframe>
-        </main>
+        <!-- mapa -->
+        <div class="ratio ratio-21x9 rounded overflow-hidden mt-4">
+            <iframe
+                src="https://www.google.com/maps?q=Lička+36,+Inđija&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Lokacija ProPVC proizvodnje na mapi">
+            </iframe>
+        </div>
+    </main>
 
-        <div id="footer-placeholder"></div>
-        <script src="script.js"></script>
-        <script src="forma.js"></script>
-    </body>
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <p class="mb-3">🕐 Radno vreme:<br>ponedeljak - petak<br>08:00 do 16:00h</p>
+                    <p class="fw-semibold">subota i nedelja neradni dani</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="mb-2">📍 Lička 36, Inđija</p>
+                    <p class="mb-2">✉️ info@ProPVC.rs</p>
+                    <p class="mb-2">📞 062/ 207 - 736</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-info mb-3">Proizvodi i usluge</h6>
+                    <p class="fw-semibold mb-2">PVC cevi</p>
+                    <p class="fw-semibold mb-2">PVC profili</p>
+                    <p class="fw-semibold mb-2">PVC ploče</p>
+                    <p class="fw-semibold mb-0">Fitinzi i spojnice</p>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <span class="fw-bold fs-5">ProPVC proizvodnja</span>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center small">
+                <p class="mb-0">Copyright © ProPVC proizvodnja. Sva prava zadržana.</p>
+                <p class="mb-0 text-muted">Stranica izrađena isključivo Bootstrap klasama</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="kontakt-bootstrap.js"></script>
+</body>
 </html>
