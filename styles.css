@@ -162,6 +162,7 @@ nav a:hover {
 
 .dugme-kontakt:hover {
   background-color: #3690c9;
+  animation: sjaj-dugmeta 1.2s ease-in-out infinite alternate;
 }
 
 /* Link ka dokumentu za preuzimanje (npr. cenovnik) */
@@ -332,6 +333,17 @@ nav a:hover {
 
 .dugme-istrazite:hover {
     background-color: #3690c9;
+    animation: sjaj-dugmeta 1.2s ease-in-out infinite alternate;
+}
+
+/* Glow efekat - koristi se na dugmadi i ikonicama pri hover-u */
+@keyframes sjaj-dugmeta {
+    from {
+        box-shadow: 0 0 4px rgba(74, 168, 224, 0.5);
+    }
+    to {
+        box-shadow: 0 0 18px rgba(74, 168, 224, 0.9);
+    }
 }
 /* kraj Hero sekcije */
 
@@ -545,6 +557,12 @@ nav a:hover {
 .kartica-ikonica {
     font-size: 36px;
     margin-bottom: 15px;
+    transition: filter 0.3s ease;
+}
+
+.kartica:hover .kartica-ikonica {
+    animation: sjaj-dugmeta 1.2s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 6px rgba(74, 168, 224, 0.7));
 }
 
 .kartica h3 {
