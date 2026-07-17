@@ -1,0 +1,244 @@
+.app-omotac {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Zaglavlje */
+.gornja-traka {
+  background-color: #1c1c2b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 8px;
+  font-size: 0.85rem;
+}
+
+.glavna-navigacija {
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo-slika {
+  height: 55px;
+  width: auto;
+}
+
+.glavna-navigacija nav {
+  display: flex;
+  gap: 25px;
+}
+
+.glavna-navigacija nav a {
+  text-decoration: none;
+  color: #1c1c2b;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.glavna-navigacija nav a:hover,
+.glavna-navigacija nav a.aktivan {
+  color: #4aa8e0;
+}
+
+.dugme-kontakt {
+  background-color: #4aa8e0;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dugme-kontakt:hover {
+  background-color: #3690c9;
+}
+
+/* Hero slajder */
+.hero-slajder {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.6s ease;
+}
+
+.hero-tekst {
+  max-width: 550px;
+}
+
+.hero-tekst h1 {
+  font-size: 2.6rem;
+  color: #1c1c2b;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-tekst-tamno h1,
+.hero-tekst-tamno p {
+  color: #fff;
+}
+
+.hero-tekst p {
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.dugme-istrazite {
+  display: inline-block;
+  background-color: #4aa8e0;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 22px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.dugme-istrazite:hover {
+  background-color: #3690c9;
+}
+
+.slajder-strelica {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.75);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.strelica-levo { left: 20px; }
+.strelica-desno { right: 20px; }
+
+.slajder-tacke {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.tacka {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+
+.tacka.aktivna-tacka {
+  background-color: #4aa8e0;
+}
+
+/* Naslovi i sekcije */
+.naslov-stranice {
+  text-align: center;
+  padding: 50px 20px 15px 20px;
+}
+
+.naslov-stranice h1 {
+  color: #1c1c2b;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.naslov-stranice p {
+  color: #555;
+}
+
+.sekcija {
+  padding: 10px 100px 40px 100px;
+}
+
+.sekcija p {
+  line-height: 1.7;
+}
+
+/* Pretraga proizvoda (React-specifičan dodatak) */
+.pretraga-proizvoda {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Kartice proizvoda */
+.kartice {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px 100px 60px 100px;
+}
+
+.kartica {
+  background-color: #f7f7f9;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.kartica:hover {
+  transform: translateY(-6px);
+}
+
+.kartica-ikonica {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.nema-rezultata {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888;
+  padding: 20px;
+}
+
+/* Podnožje */
+.podnozje {
+  background-color: #1c1c2b;
+  color: #fff;
+  margin-top: auto;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.podnozje-sadrzaj {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.podnozje-copyright {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+@media (max-width: 700px) {
+  .hero-slajder { padding: 0 25px; }
+  .hero-tekst h1 { font-size: 1.9rem; }
+  .sekcija, .kartice { padding-left: 25px; padding-right: 25px; }
+}
