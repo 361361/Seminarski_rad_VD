@@ -271,15 +271,15 @@ nav a:hover {
 
 /* Pozadine pojedinačnih slajdova (umesto inline style atributa u HTML-u) */
 .slajd-1 {
-    background-image: linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)), url('Slike/pozadina-cevi.png');
+    background-image: linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)), url('Slike/pozadina-cevi.jpg');
 }
 
 .slajd-2 {
-    background-image: linear-gradient(rgba(28,28,43,0.55), rgba(28,28,43,0.55)), url('Slike/Slika_slajd_2.png');
+    background-image: linear-gradient(rgba(28,28,43,0.55), rgba(28,28,43,0.55)), url('Slike/slika-slajd-2.jpg');
 }
 
 .slajd-3 {
-    background-image: linear-gradient(rgba(28,28,43,0.55), rgba(28,28,43,0.55)), url('Slike/Slika_slajd_3.png');
+    background-image: linear-gradient(rgba(28,28,43,0.55), rgba(28,28,43,0.55)), url('Slike/slika-slajd-3.jpg');
 }
 
 /* Utility klase - zamena za inline stilove u sekcijama */
