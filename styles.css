@@ -154,12 +154,29 @@ nav a:hover {
    padding: 12px 25px;
    border-radius: 20px;
    cursor: pointer;
-   font-weight: bold; 
+   font-weight: bold;
+   text-decoration: none;
+   display: inline-block;
    transition: background-color 0.3s ease;
 }
 
 .dugme-kontakt:hover {
   background-color: #3690c9;
+}
+
+/* Link ka dokumentu za preuzimanje (npr. cenovnik) */
+.link-dokument {
+    display: inline-block;
+    margin-left: 15px;
+    color: var(--akcenat);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.link-dokument:hover {
+    border-bottom-color: var(--akcenat);
 }
 
 .link-navigacija {
