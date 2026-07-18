@@ -1,0 +1,12 @@
+// Promenljive (varijable) - SCSS koncept koji čist CSS nema (bar ne u ovoj meri).
+// Iste boje kao glavni sajt (styles.css), samo definisane na jednom mestu
+// i višekratno korišćene kroz ceo SCSS kod.
+
+$tamna: #1c1c2b;
+$akcenat: #4aa8e0;
+$akcenat-hover: #3690c9;
+$svetla-pozadina: #f7f7f9;
+$tekst-priguseni: #555555;
+
+$razmak-kartice: 25px;
+$zaobljenje: 15px;

@@ -160,6 +160,53 @@ nav a:hover {
    transition: background-color 0.3s ease;
 }
 
+/* Mega meni - Proizvodi stavka u navigaciji */
+.mega-meni-stavka {
+    position: relative;
+}
+
+.mega-meni {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-glavna);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    padding: 25px;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 520px;
+    z-index: 30;
+}
+
+.mega-meni-stavka:hover .mega-meni,
+.mega-meni-stavka:focus-within .mega-meni {
+    display: grid;
+}
+
+.mega-meni-kolona h4 {
+    color: var(--akcenat);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.mega-meni-kolona a {
+    display: block;
+    color: var(--tekst-sekundarni);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 6px 0;
+    transition: color 0.3s ease;
+}
+
+.mega-meni-kolona a:hover {
+    color: var(--akcenat);
+}
+
 .dugme-kontakt:hover {
   background-color: #3690c9;
   animation: sjaj-dugmeta 1.2s ease-in-out infinite alternate;
@@ -307,7 +354,7 @@ nav a:hover {
     line-height: 1.2;
 }
 
-.hero-tekst h1 span {
+.hero-tekst h1 .istaknuto-tekst {
     font-weight: 900; /* deblji font za drugi red */
 }
 
@@ -372,6 +419,28 @@ nav a:hover {
 .strelica-levo { left: 25px; }
 .strelica-desno { right: 25px; }
 
+/* Dugme "Nazad na vrh" (jQuery demonstracija) */
+#nazadNaVrh {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--akcenat);
+    color: #fff;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 50;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+#nazadNaVrh:hover {
+    background-color: #3690c9;
+}
 /* Tačke slajdera */
 .slajder-tacke {
     position: absolute;
@@ -723,6 +792,16 @@ nav a:hover {
 @media (max-width: 900px) {
     .logo {
         flex-wrap: wrap;
+    }
+
+    .mega-meni {
+        position: static;
+        transform: none;
+        grid-template-columns: 1fr;
+        min-width: auto;
+        box-shadow: none;
+        margin-top: 10px;
+        gap: 15px;
     }
 
     .gornji-bar {

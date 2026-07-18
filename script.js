@@ -41,8 +41,9 @@ function podesiHamburgerMeni() {
         dugme.setAttribute("aria-expanded", jeOtvoren);
     });
 
-    // Zatvara meni kad korisnik klikne na neki od linkova (npr. na telefonu)
-    navigacija.querySelectorAll(".link-navigacija").forEach(link => {
+    // Zatvara meni kad korisnik klikne na neki od linkova (npr. na telefonu),
+    // uključujući i linkove unutar mega menija (kategorije proizvoda)
+    navigacija.querySelectorAll(".link-navigacija, .mega-meni a").forEach(link => {
         link.addEventListener("click", () => {
             navigacija.classList.remove("meni-otvoren");
             dugme.classList.remove("hamburger-aktivan");
@@ -57,9 +58,18 @@ function poslePunjenjaHeadera() {
     if (typeof podesiKontroleTemeIFonta === "function") {
         podesiKontroleTemeIFonta();
     }
+    if (typeof podesiPrekidacJezika === "function") {
+        podesiPrekidacJezika();
+    }
+}
+
+function poslePunjenjaFootera() {
+    if (typeof primeniPrevode === "function") {
+        primeniPrevode();
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     ucitajDeoStranice("header.html", "header-placeholder", poslePunjenjaHeadera);
-    ucitajDeoStranice("footer.html", "footer-placeholder");
+    ucitajDeoStranice("footer.html", "footer-placeholder", poslePunjenjaFootera);
 });

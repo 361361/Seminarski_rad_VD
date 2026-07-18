@@ -1,0 +1,74 @@
+// Glavni SCSS fajl - "kompajlira" se u obican style.css
+// (naredba: sass style.scss style.css)
+//
+// Ovo je demonstracija SCSS-a primenjena na deo postojeceg sajta
+// (kartice proizvoda) - opcioni deo seminarskog rada, tacka 4.2.3.
+
+@use "promenljive" as *;
+@use "mesavine" as *;
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    padding: 40px;
+}
+
+.naslov-demo {
+    text-align: center;
+    color: $tamna;
+    margin-bottom: 30px;
+}
+
+// Ugnježdavanje (nesting) - SCSS omogućava da se selektori pišu
+// jedan unutar drugog, prateći HTML strukturu, umesto da se
+// svaki selektor ponovo ispisuje od početka kao u čistom CSS-u.
+.kartice-scss {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: $razmak-kartice;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .kartica {
+        background-color: $svetla-pozadina;
+        border-radius: $zaobljenje;
+        padding: 25px;
+        text-align: center;
+        @include meka-tranzicija(transform);
+        @include podignuto-pri-hoveru;
+
+        // Ugnježdeni selektor unutar .kartica - u čistom CSS-u bi ovo
+        // morao da bude poseban ".kartice-scss .kartica .ikonica" selektor
+        .ikonica {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: $tamna;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: $tekst-priguseni;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        // Pseudo-klasa ugnježdena direktno unutar roditelja (& = .kartica)
+        &:hover h3 {
+            color: $akcenat;
+        }
+    }
+}
+
+.napomena-scss {
+    text-align: center;
+    color: $tekst-priguseni;
+    font-size: 0.85rem;
+    margin-top: 30px;
+}

@@ -11,13 +11,14 @@
             <button id="font-manje" class="dugme-pristupacnost" aria-label="Smanji veličinu fonta">A-</button>
             <button id="font-vise" class="dugme-pristupacnost" aria-label="Povećaj veličinu fonta">A+</button>
             <button id="dugme-tema" class="dugme-pristupacnost" aria-label="Promeni temu (svetla/tamna)">🌙</button>
+            <button id="dugme-jezik" class="dugme-pristupacnost" aria-label="Promeni jezik (srpski/engleski)">EN</button>
         </div>
     </div>
     <div class="logo">
         <a href="index.html">
             <img src="Slike/Logo_v2.png" alt="Logo ProPVC proizvodnja" class="LogoProPVC" width="500" height="500">
         </a>
-        <input type="text" placeholder="pretražite ovde" class="pretraga">
+        <input type="text" placeholder="pretražite ovde" class="pretraga" data-prevod-placeholder="opste.pretraga">
 
         <button class="hamburger" id="hamburger-dugme" aria-label="Otvori meni" aria-expanded="false">
             <span></span>
@@ -27,12 +28,35 @@
 
         <nav id="glavna-navigacija">
             <ul>
-                <li><a class="link-navigacija" href="index.html">Početna</a></li>
-                <li><a class="link-navigacija" href="proizvodi.html">Proizvodi</a></li>
-                <li><a class="link-navigacija" href="o_nama.html">O nama</a></li>
-                <li><a class="link-navigacija" href="kontakt.html">Kontakt</a></li>
+                <li><a class="link-navigacija" href="index.html" data-prevod="nav.pocetna">Početna</a></li>
+
+                <li class="mega-meni-stavka">
+                    <a class="link-navigacija" href="proizvodi.html" data-prevod="nav.proizvodi_strelica">Proizvodi ▾</a>
+                    <div class="mega-meni">
+                        <div class="mega-meni-kolona">
+                            <h4 data-prevod="nav.mega.cevi_profili">Cevi i profili</h4>
+                            <a href="proizvodi.html#pvc-cevi" data-prevod="proizvodi.cevi.naslov">PVC cevi</a>
+                            <a href="proizvodi.html#pvc-profili" data-prevod="proizvodi.profili.naslov">PVC profili</a>
+                        </div>
+                        <div class="mega-meni-kolona">
+                            <h4 data-prevod="nav.mega.ploce_fitinzi">Ploče i fitinzi</h4>
+                            <a href="proizvodi.html#pvc-ploce" data-prevod="proizvodi.ploce.naslov">PVC ploče</a>
+                            <a href="proizvodi.html#fitinzi" data-prevod="proizvodi.fitinzi.naslov">Fitinzi i spojnice</a>
+                        </div>
+                        <div class="mega-meni-kolona">
+                            <h4 data-prevod="nav.mega.polimeri">Tehnički polimeri</h4>
+                            <a href="proizvodi.html#poliamid-pom" data-prevod="proizvodi.poliamid.naslov">Poliamid / Poliacetal</a>
+                            <a href="proizvodi.html#teflon" data-prevod="proizvodi.teflon.naslov">Teflon (PTFE)</a>
+                            <a href="proizvodi.html#pp-pe" data-prevod="proizvodi.pppe.naslov">Polipropilen / Polietilen</a>
+                            <a href="proizvodi.html#peek-pet" data-prevod="proizvodi.peekpet.naslov">PEEK i PET</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a class="link-navigacija" href="o_nama.html" data-prevod="nav.onama">O nama</a></li>
+                <li><a class="link-navigacija" href="kontakt.html" data-prevod="nav.kontakt">Kontakt</a></li>
             </ul>
         </nav>
-        <a class="dugme-kontakt" href="tel:+38162207736">Pozovite nas</a>
+        <a class="dugme-kontakt" href="tel:+38162207736" data-prevod="nav.pozovite">Pozovite nas</a>
     </div>
 </header>

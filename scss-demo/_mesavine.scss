@@ -1,0 +1,13 @@
+// "Mixin" - blok stila koji se može ponovo koristiti sa parametrima.
+// Ovo čist CSS ne podržava - najbliže što CSS ima su promenljive (var()),
+// ali bez mogućnosti da se prosledi logika/parametri kao ovde.
+
+@mixin meka-tranzicija($svojstvo: all, $trajanje: 0.3s) {
+    transition: $svojstvo $trajanje ease;
+}
+
+@mixin podignuto-pri-hoveru($visina: -6px) {
+    &:hover {
+        transform: translateY($visina);
+    }
+}

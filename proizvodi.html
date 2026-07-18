@@ -6,64 +6,94 @@
         <title>ProPVC proizvodnja - Proizvodi</title>
         <meta name="description" content="Pregled proizvoda ProPVC proizvodnje: PVC cevi, profili, ploče, fitinzi i ostali industrijski plastični materijali.">
         <meta name="keywords" content="PVC cevi, PVC profili, PVC ploče, fitinzi, poliamid, teflon, polipropilen">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://361361.github.io/Seminarski_rad_VD/proizvodi.html">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="ProPVC proizvodnja - Proizvodi">
+        <meta property="og:description" content="Pregled proizvoda ProPVC proizvodnje: PVC cevi, profili, ploče, fitinzi i ostali industrijski plastični materijali.">
+        <meta property="og:url" content="https://361361.github.io/Seminarski_rad_VD/proizvodi.html">
+        <meta property="og:image" content="https://361361.github.io/Seminarski_rad_VD/Slike/Logo_v2.png">
+        <meta property="og:locale" content="sr_RS">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ProPVC proizvodnja",
+            "url": "https://361361.github.io/Seminarski_rad_VD/",
+            "logo": "https://361361.github.io/Seminarski_rad_VD/Slike/Logo_v2.png",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Lička 36",
+                "addressLocality": "Inđija",
+                "addressCountry": "RS"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+381-62-207-736",
+                "email": "info@ProPVC.rs",
+                "contactType": "customer service"
+            }
+        }
+        </script>
         <link rel="stylesheet" href="styles.css">
         <script src="tema.js"></script>
+        <script src="jezik.js"></script>
     </head>
     <body>
         <div id="header-placeholder"></div>
 
         <main>
         <div class="naslov-stranice">
-            <h1>Naši proizvodi</h1>
-            <p>Širok asortiman industrijske plastike za građevinarstvo, mašinstvo i svakodnevnu upotrebu.</p>
+            <h1 data-prevod="proizvodi.naslov">Naši proizvodi</h1>
+            <p data-prevod="proizvodi.podnaslov">Širok asortiman industrijske plastike za građevinarstvo, mašinstvo i svakodnevnu upotrebu.</p>
         </div>
 
         <div class="kartice">
-            <div class="kartica">
+            <div class="kartica" id="pvc-cevi">
                 <div class="kartica-ikonica">🧵</div>
-                <h3>PVC cevi</h3>
-                <p>Vodovodne, kanalizacione i industrijske cevi različitih prečnika, otporne na koroziju.</p>
+                <h3 data-prevod="proizvodi.cevi.naslov">PVC cevi</h3>
+                <p data-prevod="proizvodi.cevi.opis">Vodovodne, kanalizacione i industrijske cevi različitih prečnika, otporne na koroziju.</p>
             </div>
-            <div class="kartica">
+            <div class="kartica" id="pvc-profili">
                 <div class="kartica-ikonica">📐</div>
-                <h3>PVC profili</h3>
-                <p>Profili za stolariju, građevinske spojeve i unutrašnju dogradnju objekata.</p>
+                <h3 data-prevod="proizvodi.profili.naslov">PVC profili</h3>
+                <p data-prevod="proizvodi.profili.opis">Profili za stolariju, građevinske spojeve i unutrašnju dogradnju objekata.</p>
             </div>
-            <div class="kartica">
+            <div class="kartica" id="pvc-ploce">
                 <div class="kartica-ikonica">🧱</div>
-                <h3>PVC ploče</h3>
-                <p>Pune i talasaste ploče za reklamne panoe, pregrade i zaštitne obloge.</p>
+                <h3 data-prevod="proizvodi.ploce.naslov">PVC ploče</h3>
+                <p data-prevod="proizvodi.ploce.opis">Pune i talasaste ploče za reklamne panoe, pregrade i zaštitne obloge.</p>
             </div>
-            <div class="kartica">
+            <div class="kartica" id="fitinzi">
                 <div class="kartica-ikonica">🔩</div>
-                <h3>Fitinzi i spojnice</h3>
-                <p>Kolena, T-komadi i spojnice za brzu i bezbednu montažu cevovoda.</p>
+                <h3 data-prevod="proizvodi.fitinzi.naslov">Fitinzi i spojnice</h3>
+                <p data-prevod="proizvodi.fitinzi.opis">Kolena, T-komadi i spojnice za brzu i bezbednu montažu cevovoda.</p>
             </div>
-            <div class="kartica">
+            <div class="kartica" id="poliamid-pom">
                 <div class="kartica-ikonica">⚙️</div>
-                <h3>Poliamid (PA) i Poliacetal (POM)</h3>
-                <p>Tehnički polimeri visoke čvrstoće za izradu mašinskih delova i zupčanika.</p>
+                <h3 data-prevod="proizvodi.poliamid.naslov">Poliamid (PA) i Poliacetal (POM)</h3>
+                <p data-prevod="proizvodi.poliamid.opis">Tehnički polimeri visoke čvrstoće za izradu mašinskih delova i zupčanika.</p>
             </div>
-            <div class="kartica">
+            <div class="kartica" id="teflon">
                 <div class="kartica-ikonica">🔥</div>
-                <h3>Teflon (PTFE)</h3>
-                <p>Materijal otporan na visoke temperature i hemikalije, za specijalne primene.</p>
+                <h3 data-prevod="proizvodi.teflon.naslov">Teflon (PTFE)</h3>
+                <p data-prevod="proizvodi.teflon.opis">Materijal otporan na visoke temperature i hemikalije, za specijalne primene.</p>
             </div>
-            <div class="kartica">
+            <div class="kartica" id="pp-pe">
                 <div class="kartica-ikonica">🧴</div>
-                <h3>Polipropilen (PP) i Polietilen (PE)</h3>
-                <p>Laki i fleksibilni materijali za ambalažu, rezervoare i hemijsku industriju.</p>
+                <h3 data-prevod="proizvodi.pppe.naslov">Polipropilen (PP) i Polietilen (PE)</h3>
+                <p data-prevod="proizvodi.pppe.opis">Laki i fleksibilni materijali za ambalažu, rezervoare i hemijsku industriju.</p>
             </div>
-            <div class="kartica">
+            <div class="kartica" id="peek-pet">
                 <div class="kartica-ikonica">🧪</div>
-                <h3>PEEK i PET</h3>
-                <p>Visokoperformansni polimeri za zahtevne industrijske i prehrambene primene.</p>
+                <h3 data-prevod="proizvodi.peekpet.naslov">PEEK i PET</h3>
+                <p data-prevod="proizvodi.peekpet.opis">Visokoperformansni polimeri za zahtevne industrijske i prehrambene primene.</p>
             </div>
         </div>
 
         <div class="naslov-stranice">
-            <h1>Proizvodni proces</h1>
-            <p>Pogledajte prezentaciju naših proizvoda u realnoj upotrebi.</p>
+            <h1 data-prevod="proizvodi.video.naslov">Proizvodni proces</h1>
+            <p data-prevod="proizvodi.video.podnaslov">Pogledajte prezentaciju naših proizvoda u realnoj upotrebi.</p>
         </div>
         <div class="sekcija">
                 <div class="video-youtube-wrap">
@@ -78,17 +108,20 @@
                 </div>
         </div>
 
-        <div class="sekcija bez-gornjeg-razmaka">
-            <p>
+        <div class="sekcija bez-gornjeg-razmaka centrirano">
+            <p data-prevod="proizvodi.zakljucak">
                 Za sve proizvode iz našeg asortimana raspoloživa je tehnička dokumentacija
                 i stručan savet naših prodajnih predstavnika. Za detaljnu ponudu i cene,
                 slobodno nas kontaktirajte.
             </p>
-            <a class="dugme-kontakt" href="kontakt.html">Kontaktirajte nas</a>
+            <a class="dugme-kontakt" href="kontakt.html" data-prevod="nav.kontakt_dugme">Kontaktirajte nas</a>
+            <a class="link-dokument" href="Slike/dokumenti/Cenovnik.pdf" download data-prevod="proizvodi.cenovnik">📄 Preuzmite cenovnik (PDF)</a>
         </div>
         </main>
 
         <div id="footer-placeholder"></div>
         <script src="script.js"></script>
+        <script src="jquery/jquery.min.js"></script>
+        <script src="jquery-dodaci.js"></script>
     </body>
 </html>

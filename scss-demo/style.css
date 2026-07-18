@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.naslov-demo {
+  text-align: center;
+  color: #1c1c2b;
+  margin-bottom: 30px;
+}
+
+.kartice-scss {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.kartice-scss .kartica {
+  background-color: #f7f7f9;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.kartice-scss .kartica:hover {
+  transform: translateY(-6px);
+}
+.kartice-scss .kartica .ikonica {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.kartice-scss .kartica h3 {
+  color: #1c1c2b;
+  margin-bottom: 8px;
+}
+.kartice-scss .kartica p {
+  color: #555555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.kartice-scss .kartica:hover h3 {
+  color: #4aa8e0;
+}
+
+.napomena-scss {
+  text-align: center;
+  color: #555555;
+  font-size: 0.85rem;
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
